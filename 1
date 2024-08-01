@@ -1,0 +1,23 @@
+#temperature
+
+qt = int(input())
+bigger = 0
+minor = 9999999999
+cont = 0
+list = []
+
+def media(list):
+  for i in list:
+    cont += i
+  media = cont / len(list)
+  return media
+
+for i in range(qt):
+  temp = int(input())
+  if temp > bigger:
+    bigger = temp
+  elif temp < minor:
+    minor = temp
+  list.append(temp)
+
+print(media(list))
